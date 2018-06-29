@@ -17,21 +17,21 @@
 				if (ed.dom.getAttrib(ed.selection.getNode(), 'class', '').indexOf('mceItem') != -1)
 					return;
 
-        var width = 950;
-        var height = 500;
+        var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
 
-        if( typeof( window.innerWidth ) == 'number' ) {
-            //Non-IE
-            width = window.innerWidth-80;
-            height = window.innerHeight-100;
+        if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+            width = width - 6;
+        } else {
+            height = height - 90;
         }
-        else if( document.documentElement &&
-            ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-            //IE 6+ in 'standards compliant mode'
-            width = document.documentElement.clientWidth-80;
-            height = document.documentElement.clientHeight-100;
-        }
-
 
         if (width>950) {
             width=950;
@@ -39,13 +39,6 @@
         if (height>1400) {
             height=1400;
         }
-        if (height < 480) {
-            height = 480;
-        }
-        if (width < 770) {
-            width = 770;
-        }
-
 
 				ed.windowManager.open({
 					file : url + '/hml.html',
