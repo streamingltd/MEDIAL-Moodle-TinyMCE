@@ -16,7 +16,11 @@ class tinymce_helixmedia extends editor_tinymce_plugin {
     protected $buttons = array('helixmedia');
 
     protected function update_init_params(array &$params, context $context,
-            array $options = null) {
+        array $options = null) {
+
+
+        $params['ltiurl'] = get_config("helixmedia", "launchurl");
+
 
         // Add JS file, which uses default name.
         if (has_capability("mod/helixmedia:addinstance", $context))

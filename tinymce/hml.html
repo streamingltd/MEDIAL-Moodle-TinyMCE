@@ -39,7 +39,7 @@
             inserted=true;
             var url=getHMLLaunchURL()+"?type=10&l="+preid;
             var html="<p><iframe style=\"border:0px;background:#ffffff;width:680px;height:570px;\""+
-                " src=\""+url+"\" id=\"hmlvid-"+preid+"\" allowfullscreen=\"true\" webkitallowfullscreen=\"true\" mozallowfullscreen=\"true\"></iframe>\n"+
+                " src=\""+url+"\" id=\"hmlvid-"+preid+"\" allowfullscreen=\"true\" webkitallowfullscreen=\"true\" mozallowfullscreen=\"true\" ></iframe>\n"+
                 "</p>";
 
             tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
@@ -71,9 +71,10 @@
             height = document.documentElement.clientHeight-44;
         }
 
+            var ltiurl = tinyMCEPopup.getParam("ltiurl");
             var url=getHMLLaunchURL()+"?type=9";
             //document.write("<iframe style=\"border:0px;background:#ffffff;width:935px;height:455px;\" src=\""+url+"\"></iframe>");
-            document.write("<iframe style=\"border:0px;background:#ffffff;width:"+width+"px;height:"+height+"px;\" src=\""+url+"\"></iframe>");
+            document.write("<iframe style=\"border:0px;background:#ffffff;width:"+width+"px;height:"+height+"px;\" allow=\"microphone "+ltiurl+"; camera "+ltiurl+"\" src=\""+url+"\"></iframe>");
         </script>
         <div class="mceActionPanel">
             <input type="submit" id="insert" name="insert" value="{#insert}" />
