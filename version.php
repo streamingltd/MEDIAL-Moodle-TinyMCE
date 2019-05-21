@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // The current plugin version (Date: YYYYMMDDXX).
-$plugin->version   = 2018121804;
+$plugin->version   = 2019052102;
 // Required Moodle version.
 $plugin->requires  = 2016052300;
 // Full name of the plugin (used for diagnostics).
@@ -35,5 +35,5 @@ $plugin->component = 'tinymce_helixmedia';
 $plugin->maturity = MATURITY_STABLE;
 
 $plugin->dependencies = array(
-    'mod_helixmedia' => '2018121804'
+    'mod_helixmedia' => '2019052102'
 );
