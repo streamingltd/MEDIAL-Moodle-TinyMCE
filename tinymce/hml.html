@@ -39,8 +39,8 @@
             inserted=true;
             var url=getHMLLaunchURL()+"?type=10&l="+preid;
             var html="<p><iframe style=\"border:0px;background:#ffffff;width:680px;height:570px;\""+
-                " src=\""+url+"\" id=\"hmlvid-"+preid+"\" allowfullscreen=\"true\" webkitallowfullscreen=\"true\" mozallowfullscreen=\"true\" ></iframe>\n"+
-                "</p>";
+                " src=\""+url+"\" id=\"hmlvid-"+preid+"\" allowfullscreen=\"true\" webkitallowfullscreen=\"true\""+
+                " mozallowfullscreen=\"true\" ></iframe>\n</p>";
 
             tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
             tinyMCEPopup.close();
@@ -56,25 +56,25 @@
 <body>
     <form onsubmit="insertMedia();return false;" action="#">
         <script type="text/javascript">
-        var width = 950;
-        var height = 500;
+            var width = 950;
+            var height = 500;
 
-        if( typeof( window.innerWidth ) == 'number' ) {
-            //Non-IE
-            width = window.innerWidth-18;
-            height = window.innerHeight-44;
-        }
-        else if( document.documentElement &&
-            ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-            //IE 6+ in 'standards compliant mode'
-            width = document.documentElement.clientWidth-18;
-            height = document.documentElement.clientHeight-44;
-        }
+            if( typeof( window.innerWidth ) == 'number' ) {
+                //Non-IE
+                width = window.innerWidth-18;
+                height = window.innerHeight-44;
+            }
+            else if( document.documentElement &&
+                ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                //IE 6+ in 'standards compliant mode'
+                width = document.documentElement.clientWidth-18;
+                height = document.documentElement.clientHeight-44;
+            }
 
             var ltiurl = tinyMCEPopup.getParam("ltiurl");
             var url=getHMLLaunchURL()+"?type=9";
-            //document.write("<iframe style=\"border:0px;background:#ffffff;width:935px;height:455px;\" src=\""+url+"\"></iframe>");
-            document.write("<iframe style=\"border:0px;background:#ffffff;width:"+width+"px;height:"+height+"px;\" allow=\"microphone "+ltiurl+"; camera "+ltiurl+"\" src=\""+url+"\"></iframe>");
+            document.write("<iframe style=\"border:0px;background:#ffffff;width:"+width+"px;height:"+height+"px;\""+
+                "allow=\"microphone "+ltiurl+"; camera "+ltiurl+"\" src=\""+url+"\"></iframe>");
         </script>
         <div class="mceActionPanel">
             <input type="submit" id="insert" name="insert" value="{#insert}" />

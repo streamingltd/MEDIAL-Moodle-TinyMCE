@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -26,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // The current plugin version (Date: YYYYMMDDXX).
-$plugin->version   = 2020012101;
+$plugin->version   = 2020111701;
 // Required Moodle version.
 $plugin->requires  = 2018051700;
 // Full name of the plugin (used for diagnostics).
@@ -35,5 +34,5 @@ $plugin->component = 'tinymce_helixmedia';
 $plugin->maturity = MATURITY_STABLE;
 
 $plugin->dependencies = array(
-    'mod_helixmedia' => '2020012101'
+    'mod_helixmedia' => '2020111701'
 );
