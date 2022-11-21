@@ -1,6 +1,4 @@
-This is the Helix Media Library Tiny MCE HTML editor plugin for Moodle 2.x.
-
-This plugin Requires Moodle 2.5 or better.
+This is the Helix Media Library Tiny MCE HTML editor plugin for Moodle 3.x and better.
 
 
 Installation
