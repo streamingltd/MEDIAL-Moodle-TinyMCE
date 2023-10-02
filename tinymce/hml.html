@@ -74,7 +74,7 @@
             var ltiurl = tinyMCEPopup.getParam("ltiurl");
             var url=getHMLLaunchURL()+"?type=9";
             document.write("<iframe style=\"border:0px;background:#ffffff;width:"+width+"px;height:"+height+"px;\""+
-                "allow=\"microphone "+ltiurl+"; camera "+ltiurl+"\" src=\""+url+"\"></iframe>");
+                "allow=\"microphone "+ltiurl+"; camera "+ltiurl+"; display-capture "+ltiurl+";\" src=\""+url+"\"></iframe>");
         </script>
         <div class="mceActionPanel">
             <input type="submit" id="insert" name="insert" value="{#insert}" />
