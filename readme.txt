@@ -1,4 +1,8 @@
-This is the Helix Media Library Tiny MCE HTML editor plugin for Moodle 3.x and better.
+This is the Helix Media Library Tiny MCE HTML legacy editor plugin for Moodle 3.x and better.
+
+Support for this plugin has now been discontinued, there is a new MEDIAL TinyMCE 6+ plugin which can be used with
+Moodle 4.1+ available here: https://github.com/streamingltd/MEDIAL-Moodle-TinyEditor
+
 
 
 Installation
